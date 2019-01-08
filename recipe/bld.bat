@@ -3,7 +3,7 @@ cd build
 
 cmake ../^
     -G"Visual Studio 14 2015 Win64"^
-    -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%"^
+    -DCMAKE_INSTALL_PREFIX="%PREFIX%"^
 	-DBUILD_EXAMPLE=OFF^
 	-DBINDER_MATLAB=OFF^
     -DBINDER_PYTHON3=ON^
@@ -12,3 +12,5 @@ cmake ../^
 cmake --build ./^
     --config Release^
     --target install
+
+move %PREFIX%\bin\ezc3d.dll %LIBRARY_PREFIX%\bin\ezc3d.dll
