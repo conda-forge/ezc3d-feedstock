@@ -13,3 +13,5 @@ cmake ../^
 cmake --build ./^
     --config Release^
     --target install
+
+move %PREFIX%\bin\ezc3d.dll %LIBRARY_PREFIX%\bin\ezc3d.dll
