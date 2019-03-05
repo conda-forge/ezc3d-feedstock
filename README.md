@@ -1,7 +1,9 @@
+<!--
+# -*- mode: jinja -*-
+-->
+
 About ezc3d
 ===========
-
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
 
 Home: https://github.com/pyomeca/ezc3d
 
@@ -20,8 +22,8 @@ Current build status
 ====================
 
 [![Linux](https://img.shields.io/circleci/project/github/conda-forge/ezc3d-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/ezc3d-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/ezc3d-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/ezc3d-feedstock)
 [![Windows](https://img.shields.io/appveyor/ci/conda-forge/ezc3d-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/ezc3d-feedstock/branch/master)
-![OSX disabled](https://img.shields.io/badge/OSX-disabled-lightgrey.svg)
 
 Current release info
 ====================
@@ -54,6 +56,8 @@ conda search ezc3d --channel conda-forge
 
 About conda-forge
 =================
+
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
