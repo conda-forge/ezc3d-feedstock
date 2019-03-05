@@ -1,4 +1,4 @@
-{% set version = "0.3.3" %}
+{% set version = "0.3.4" %}
 
 package:
   name: ezc3d
@@ -10,7 +10,7 @@ source:
   sha256: be3ee08f5804521b1096c75be10987d97899fdf47ea7628ef9f53224728d7715
 
 build:
-  skip: True  # [py2k or osx]
+  skip: True  # [py2k]
   number: 1003
   rpaths:
     - lib/
