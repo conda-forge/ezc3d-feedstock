@@ -10,7 +10,7 @@ source:
   sha256: e3df9ad0fc106b271c39e5e63e1f82f92061d0a68bd3689a783bb2641848c266
 
 build:
-  skip: True  # [py2k]
+  skip: True  # [py2k or osx]
   number: 0
   rpaths:
     - lib/
