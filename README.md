@@ -22,8 +22,8 @@ Current build status
 ====================
 
 [![Linux](https://img.shields.io/circleci/project/github/conda-forge/ezc3d-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/ezc3d-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/ezc3d-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/ezc3d-feedstock)
 [![Windows](https://img.shields.io/appveyor/ci/conda-forge/ezc3d-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/ezc3d-feedstock/branch/master)
-![OSX disabled](https://img.shields.io/badge/OSX-disabled-lightgrey.svg)
 
 Current release info
 ====================
