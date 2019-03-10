@@ -118,4 +118,5 @@ Feedstock Maintainers
 =====================
 
 * [@melund](https://github.com/melund/)
+* [@pariterre](https://github.com/pariterre/)
 
