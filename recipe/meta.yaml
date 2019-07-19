@@ -1,4 +1,4 @@
-{% set version = "0.4.0" %}
+{% set version = "1.0.0" %}
 
 package:
   name: ezc3d
@@ -7,7 +7,7 @@ package:
 source:
   fn: {{ version }}.tar.gz
   url: https://github.com/pyomeca/ezc3d/archive/Release_{{ version }}.tar.gz
-  sha256: 2b1d67c491edf2d14e02cf70dd5e2b09eff236242051f2c5be2950c9942d3190
+  sha256: 517b11f1c5b0a48f16e3bf55bceee74ee7bfd6ae915b1ad8768e677a55c4784b
 
 build:
   skip: True  # [py2k]
