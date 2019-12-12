@@ -2,7 +2,7 @@ mkdir build
 cd build
 
 cmake ../^
-    -G"Visual Studio 14 2015 Win64"^
+    -G"NMake Makefiles JOM"^
     -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%"^
 	-DBUILD_EXAMPLE=OFF^
 	-DBINDER_MATLAB=OFF^
