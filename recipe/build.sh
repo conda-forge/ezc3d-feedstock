@@ -11,6 +11,7 @@ cmake ../ \
     -DCMAKE_PREFIX_PATH=$PREFIX \
     -DPython_EXECUTABLE=$PREFIX/bin/python \
     -DPython3_EXECUTABLE=$PREFIX/bin/python \
+    -DCMAKE_BUILD_TYPE=Release \
     -DBINDER_PYTHON3=ON
 
 make -j $CPU_COUNT
