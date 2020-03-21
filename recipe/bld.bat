@@ -7,6 +7,7 @@ cmake ../ ^
 	-DBUILD_EXAMPLE=OFF ^
 	-DBINDER_MATLAB=OFF ^
     -DBINDER_PYTHON3=ON ^
+    -DCMAKE_BUILD_TYPE=Release ^
     -DPython3_EXECUTABLE="%PREFIX%/python.exe"
 
 cmake --build ./ ^
