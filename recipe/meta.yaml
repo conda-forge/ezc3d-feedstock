@@ -10,7 +10,7 @@ source:
   sha256: 7dccf31ba982d727daecdcb25bcf6f81f40c7f711f1416632cc056e5fd3e08d1
 
 build:
-  skip: True  # [py2k]
+  skip: True  # [py2k or python_impl == "pypy"]
   number: 2
   rpaths:
     - lib/
