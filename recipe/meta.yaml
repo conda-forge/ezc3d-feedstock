@@ -11,11 +11,12 @@ source:
 
 build:
   skip: true  # [py2k]
-  number: 0
+  number: 1
   rpaths:
     - lib/
     - lib/ezc3d/
-
+ run_exports:
+    - {{ pin_subpackage('ezc3d', max_pin='x.x') }}
 
 requirements:
   build:
@@ -38,7 +39,6 @@ test:
 about:
   home: https://github.com/pyomeca/ezc3d
   license: MIT
-  license_family: MIT
   license_file: LICENSE
   summary: Easy to use C3D reader/writer in C++, Python
 
