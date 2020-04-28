@@ -28,7 +28,8 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-
+  run_exports:
+    - {{ pin_subpackage('ezc3d', max_pin='x.x') }}
 
 test:
   imports:
