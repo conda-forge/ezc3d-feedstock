@@ -15,8 +15,6 @@ build:
   rpaths:
     - lib/
     - lib/ezc3d/
- run_exports:
-    - {{ pin_subpackage('ezc3d', max_pin='x.x') }}
 
 requirements:
   build:
