@@ -13,7 +13,7 @@ cmake ../ \
     -DPython_EXECUTABLE=$PREFIX/bin/python \
     -DPython3_EXECUTABLE=$PREFIX/bin/python \
     -DCMAKE_BUILD_TYPE=Release \
-    -$backend_name_in_build=ON
+    -D$backend_name_in_build=ON
 
 make -j $CPU_COUNT
 make install
