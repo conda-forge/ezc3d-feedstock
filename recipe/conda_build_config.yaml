@@ -1,10 +1,10 @@
 backend:
   - 'python3'
-  - 'octave'
+  - 'octave'  # [linux or osx]
 
 backend_name_in_build:
   - 'BINDER_PYTHON3'
-  - 'BINDER_OCTAVE'
+  - 'BINDER_OCTAVE'  # [linux or osx]
   
 zip_keys:
 -
