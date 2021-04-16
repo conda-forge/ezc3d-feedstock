@@ -21,7 +21,7 @@ build:
     - ezc3d * {{ backend }}_*
   string: py{{ py }}_{{ backend }}_h{{ PKG_HASH }}_{{ build_num }}
   track_features:
-    - python  # [backend == "python3"]
+    - octave  # [backend == "octave"]
 
 requirements:
   build:
