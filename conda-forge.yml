@@ -4,4 +4,3 @@ bot:
 github:
   branch_name: main
   tooling_branch_name: main
-test_on_native_only: true
