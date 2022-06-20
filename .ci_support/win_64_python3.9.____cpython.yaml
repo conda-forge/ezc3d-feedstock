@@ -1,3 +1,5 @@
+backend:
+- python3
 channel_sources:
 - conda-forge
 channel_targets:
