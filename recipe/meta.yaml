@@ -12,7 +12,6 @@ source:
 
 build:
   skip: true  # [py2k]
-  skip: true  # [py>39]
   number: 1
   rpaths:
     - lib/
