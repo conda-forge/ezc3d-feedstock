@@ -8,29 +8,11 @@ jobs:
     vmImage: macOS-10.15
   strategy:
     matrix:
-      osx_64_backendoctavepython3.10.____cpython:
-        CONFIG: osx_64_backendoctavepython3.10.____cpython
+      osx_64_backendoctave:
+        CONFIG: osx_64_backendoctave
         UPLOAD_PACKAGES: 'True'
-      osx_64_backendoctavepython3.7.____cpython:
-        CONFIG: osx_64_backendoctavepython3.7.____cpython
-        UPLOAD_PACKAGES: 'True'
-      osx_64_backendoctavepython3.8.____cpython:
-        CONFIG: osx_64_backendoctavepython3.8.____cpython
-        UPLOAD_PACKAGES: 'True'
-      osx_64_backendoctavepython3.9.____cpython:
-        CONFIG: osx_64_backendoctavepython3.9.____cpython
-        UPLOAD_PACKAGES: 'True'
-      osx_64_backendpython3python3.10.____cpython:
-        CONFIG: osx_64_backendpython3python3.10.____cpython
-        UPLOAD_PACKAGES: 'True'
-      osx_64_backendpython3python3.7.____cpython:
-        CONFIG: osx_64_backendpython3python3.7.____cpython
-        UPLOAD_PACKAGES: 'True'
-      osx_64_backendpython3python3.8.____cpython:
-        CONFIG: osx_64_backendpython3python3.8.____cpython
-        UPLOAD_PACKAGES: 'True'
-      osx_64_backendpython3python3.9.____cpython:
-        CONFIG: osx_64_backendpython3python3.9.____cpython
+      osx_64_backendpython3:
+        CONFIG: osx_64_backendpython3
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
 
