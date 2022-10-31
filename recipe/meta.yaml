@@ -1,5 +1,5 @@
 {% set version = "1.5.0" %}
-{% set build_num = 2 %}
+{% set build_num = 3 %}
 
 package:
   name: ezc3d
@@ -11,9 +11,8 @@ source:
   sha256: 8387857d989f5bbb62869ec930b417e6d0a303eef9b39e8b0e6b35437d5809ce
 
 build:
-  skip: true  # [py2k]
-  skip: true  # [py>39]
-  number: 2
+  skip: true  # [py<39]
+  number: 3
   rpaths:
     - lib/
     - lib/ezc3d/
