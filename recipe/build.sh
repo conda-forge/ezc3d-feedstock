@@ -9,8 +9,7 @@ cmake ../ \
     -DCMAKE_PREFIX_PATH=$PREFIX \
     -DBUILD_EXAMPLE=OFF \
     -DBINDER_MATLAB=OFF \
-    -D$backend_name_in_build=ON
-    -DMatlab_ezc3d_INSTALL_DIR=$PREFIX/MATLAB \
+    -D$backend_name_in_build=ON \
     -DOctave_ezc3d_INSTALL_DIR=$PREFIX/Octave \
     -DPython3_EXECUTABLE=$PREFIX/bin/python
 
