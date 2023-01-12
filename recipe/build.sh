@@ -10,8 +10,7 @@ cmake ../ \
     -DBUILD_EXAMPLE=OFF \
     -DBINDER_MATLAB=OFF \
     -D$backend_name_in_build=ON \
-    -DOctave_ezc3d_INSTALL_DIR=$PREFIX/Octave \
-    -DPython3_EXECUTABLE=$PREFIX/bin/python
+    -DOctave_ezc3d_INSTALL_DIR=$PREFIX/Octave
 
 ninja install
 
