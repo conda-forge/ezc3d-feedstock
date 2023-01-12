@@ -25,13 +25,12 @@ build:
 
 requirements:
   build:
-    - make 
     - cmake
     - swig
     - pkgconfig
     - python  # [build_platform != target_platform]
     - numpy  # [build_platform != target_platform]
-    - ninja  # [win]
+    - ninja 
     - {{ compiler('cxx') }}
   host:
     - python  # [backend == "python3"]
