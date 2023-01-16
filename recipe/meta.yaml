@@ -3,7 +3,7 @@
 {% set build_num = 4 %}
 
 package:
-  name: ezc3d
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
