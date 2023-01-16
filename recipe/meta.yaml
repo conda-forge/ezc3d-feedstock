@@ -29,23 +29,23 @@ requirements:
     - ninja
     - pkgconfig
     - swig
-    - python                                 # [build_platform != target_platform and backend == python3]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform and backend == python3]
-    - numpy                                  # [build_platform != target_platform and backend == python3]
-    - octave                                 # [backend == octave]
+    - python                                 # [build_platform != target_platform and backend == "python3"]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform and backend == "python3"]
+    - numpy                                  # [build_platform != target_platform and backend == "python3"]
+    - octave                                 # [backend == "octave"]
     - {{ compiler('cxx') }}
   host:
-    - python   # [backend == python3]
-    - numpy    # [backend == python3]
-    - octave   # [backend == octave]
+    - python   # [backend == "python3"]
+    - numpy    # [backend == "python3"]
+    - octave   # [backend == "octave"]
   run:
-    - python                          # [backend == python3]
-    - {{ pin_compatible('numpy') }}   # [backend == python3]
-    - octave                          # [backend == octave]
+    - python                          # [backend == "python3"]
+    - {{ pin_compatible('numpy') }}   # [backend == "python3"]
+    - octave                          # [backend == "octave"]
 
 test:
   imports:
-    - ezc3d  # [backend == python3]
+    - ezc3d  # [backend == "python3"]
 
 about:
   home: https://github.com/pyomeca/ezc3d
