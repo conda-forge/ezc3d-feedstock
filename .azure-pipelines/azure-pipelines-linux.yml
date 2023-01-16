@@ -8,28 +8,12 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_backendoctavenumpy1.20python3.9.____cpython:
-        CONFIG: linux_64_backendoctavenumpy1.20python3.9.____cpython
+      linux_64_backendoctave:
+        CONFIG: linux_64_backendoctave
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_backendoctavenumpy1.21python3.10.____cpython:
-        CONFIG: linux_64_backendoctavenumpy1.21python3.10.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_backendoctavenumpy1.23python3.11.____cpython:
-        CONFIG: linux_64_backendoctavenumpy1.23python3.11.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_backendpython3numpy1.20python3.9.____cpython:
-        CONFIG: linux_64_backendpython3numpy1.20python3.9.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_backendpython3numpy1.21python3.10.____cpython:
-        CONFIG: linux_64_backendpython3numpy1.21python3.10.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_backendpython3numpy1.23python3.11.____cpython:
-        CONFIG: linux_64_backendpython3numpy1.23python3.11.____cpython
+      linux_64_backendpython3:
+        CONFIG: linux_64_backendpython3
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
   timeoutInMinutes: 360
