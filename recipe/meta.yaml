@@ -1,4 +1,4 @@
-{% set name = ezc3d %}
+{% set name = "ezc3d" %}
 {% set version = "1.5.1" %}
 {% set build_num = 4 %}
 
