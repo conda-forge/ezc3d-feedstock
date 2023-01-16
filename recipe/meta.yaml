@@ -11,15 +11,13 @@ source:
   sha256: e7041e71cd1c195d6cf5e3fc22ff8c703f1ab8b24dbbc3832c571034d61df467
 
 build:
-  skip: true  # [py<39]
-  number: 0
+  number: {{ build_num }}
   rpaths:
     - lib/
-    - lib/ezc3d/
+    - lib/{{ name }}/
   run_exports:
     - {{ pin_subpackage('ezc3d', max_pin='x.x') }}
-  string: py{{ py }}_h{{ PKG_HASH }}_{{ build_num }}
-
+  skip: true  # [py<39]
 requirements:
   build:
     - cmake
