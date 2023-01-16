@@ -1,43 +1,48 @@
+{% set name = "ezc3d" %}
 {% set version = "1.5.1" %}
-{% set build_num = 3 %}
+{% set build_num = 4 %}
 
 package:
-  name: ezc3d
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ version }}.tar.gz
-  url: https://github.com/pyomeca/ezc3d/archive/Release_{{ version }}.tar.gz
+  url: https://github.com/pyomeca/{{ name }}/archive/Release_{{ version }}.tar.gz
   sha256: e7041e71cd1c195d6cf5e3fc22ff8c703f1ab8b24dbbc3832c571034d61df467
 
 build:
-  skip: true  # [py<39]
-  number: 0
+  number: {{ build_num }}
   rpaths:
     - lib/
-    - lib/ezc3d/
+    - lib/{{ name }}/
   run_exports:
     - {{ pin_subpackage('ezc3d', max_pin='x.x') }}
-    - ezc3d * {{ backend }}_*
+    - {{ name }} * {{ backend }}_*
+  skip: true  # [py<39]
+  skip: true  # [arm64 and backend == "octave"]
   string: py{{ py }}_{{ backend }}_h{{ PKG_HASH }}_{{ build_num }}
   track_features:
     - octave  # [backend == "octave"]
-
+    
 requirements:
   build:
-    - {{ compiler('cxx') }}
-    - make
     - cmake
+    - ninja
+    - pkgconfig
     - swig
-    - ninja  # [win]
+    - python                                 # [build_platform != target_platform and backend == "python3"]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform and backend == "python3"]
+    - numpy                                  # [build_platform != target_platform and backend == "python3"]
+    - octave                                 # [backend == "octave"]
+    - {{ compiler('cxx') }}
   host:
-    - python  # [backend == "python3"]
-    - numpy  # [backend == "python3"]
-    - octave  # [backend == "octave"]
+    - python   # [backend == "python3"]
+    - numpy    # [backend == "python3"]
+    - octave   # [backend == "octave"]
   run:
-    - python  # [backend == "python3"]
-    - {{ pin_compatible('numpy') }}  # [backend == "python3"]
-    - octave  # [backend == "octave"]
+    - python                          # [backend == "python3"]
+    - {{ pin_compatible('numpy') }}   # [backend == "python3"]
+    - octave                          # [backend == "octave"]
 
 test:
   imports:
