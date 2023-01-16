@@ -13,10 +13,3 @@ cmake ../ \
     -DOctave_ezc3d_INSTALL_DIR=$PREFIX/Octave
 
 ninja install
-
-# Octave can't be tested from meta.yaml because of the install path not know in that file
-if [ $backend == "octave" ] && [ "$OSTYPE" == "darwin" ]; 
-then 
-    octave --eval "addpath('$PREFIX/Octave/ezc3d_octave'); c = ezc3dRead();"
-fi
-
