@@ -9,7 +9,7 @@ cmake ../ \
     -DCMAKE_PREFIX_PATH=$PREFIX \
     -DBUILD_EXAMPLE=OFF \
     -DBINDER_MATLAB=OFF \
-    -D$backend_name_in_build=ON \
+    -DBINDER_PYTHON3=ON \
     -DOctave_ezc3d_INSTALL_DIR=$PREFIX/Octave
 
 ninja install
