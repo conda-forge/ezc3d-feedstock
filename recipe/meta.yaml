@@ -6,7 +6,6 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ version }}.tar.gz
   url: https://github.com/pyomeca/ezc3d/archive/Release_{{ version }}.tar.gz
   sha256: e7041e71cd1c195d6cf5e3fc22ff8c703f1ab8b24dbbc3832c571034d61df467
 
