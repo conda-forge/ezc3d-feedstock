@@ -1,5 +1,5 @@
 {% set name = "ezc3d" %}
-{% set version = "1.5.1" %}
+{% set version = "1.5.2" %}
 {% set build_num = 4 %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/pyomeca/{{ name }}/archive/Release_{{ version }}.tar.gz
-  sha256: e7041e71cd1c195d6cf5e3fc22ff8c703f1ab8b24dbbc3832c571034d61df467
+  sha256: 469c2089c0f885c9dd994bb02d70939da1ec2ddd37ea353964aafa8a5b2d7165
 
 build:
   number: {{ build_num }}
@@ -23,7 +23,6 @@ build:
   string: py{{ py }}_{{ backend }}_h{{ PKG_HASH }}_{{ build_num }}
   track_features:
     - octave  # [backend == "octave"]
-    
 requirements:
   build:
     - cmake
