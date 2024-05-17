@@ -18,7 +18,7 @@ build:
   run_exports:
     - {{ pin_subpackage('ezc3d', max_pin='x.x') }}
     - {{ name }} * {{ backend }}_*
-  skip: true  # [py<39]
+  skip: true  # [py<310]
   skip: true  # [arm64 and backend == "octave"]
   string: py{{ py }}_{{ backend }}_h{{ PKG_HASH }}_{{ build_num }}
   track_features:
