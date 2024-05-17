@@ -1,5 +1,5 @@
 {% set name = "ezc3d" %}
-{% set version = "1.5.9" %}
+{% set version = "1.5.10" %}
 {% set build_num = 0 %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/pyomeca/{{ name }}/archive/Release_{{ version }}.tar.gz
-  sha256: dcc4df2097eadb33773aa1563621ad07e3758296a66974fe95fc9e27ee74aebd
+  sha256: c200c102ce845b9560eddcc0bd709b832da8e3332f7fa150d9cabd4a5e27da2a
 
 build:
   number: {{ build_num }}
@@ -18,7 +18,7 @@ build:
   run_exports:
     - {{ pin_subpackage('ezc3d', max_pin='x.x') }}
     - {{ name }} * {{ backend }}_*
-  skip: true  # [py<39]
+  skip: true  # [py<310]
   skip: true  # [arm64 and backend == "octave"]
   string: py{{ py }}_{{ backend }}_h{{ PKG_HASH }}_{{ build_num }}
   track_features:
