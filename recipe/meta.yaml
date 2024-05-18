@@ -34,13 +34,13 @@ requirements:
     - numpy                                  # [build_platform != target_platform and backend == "python3"]
     - octave                                 # [backend == "octave"]
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
   host:
     - python   # [backend == "python3"]
     - numpy    # [backend == "python3"]
     - octave   # [backend == "octave"]
   run:
     - python                          # [backend == "python3"]
-    - {{ pin_compatible('numpy') }}   # [backend == "python3"]
     - octave                          # [backend == "octave"]
 
 test:
