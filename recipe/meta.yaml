@@ -1,6 +1,6 @@
 {% set name = "ezc3d" %}
 {% set version = "1.5.10" %}
-{% set build_num = 0 %}
+{% set build_num = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -17,7 +17,7 @@ build:
     - lib/{{ name }}/
   run_exports:
     - {{ pin_subpackage('ezc3d', max_pin='x.x') }}
-    - {{ name }} * {{ backend }}_*
+    - {{ name }} * *{{ backend }}*
   skip: true  # [py<310]
   skip: true  # [arm64 and backend == "octave"]
   string: py{{ py }}_{{ backend }}_h{{ PKG_HASH }}_{{ build_num }}
@@ -34,6 +34,7 @@ requirements:
     - numpy                                  # [build_platform != target_platform and backend == "python3"]
     - octave                                 # [backend == "octave"]
     - {{ compiler('cxx') }}
+    - {{ stdlib('c') }}
   host:
     - python   # [backend == "python3"]
     - numpy    # [backend == "python3"]
