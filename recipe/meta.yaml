@@ -41,7 +41,6 @@ requirements:
     - octave   # [backend == "octave"]
   run:
     - python                          # [backend == "python3"]
-    - {{ pin_compatible('numpy') }}   # [backend == "python3"]
     - octave                          # [backend == "octave"]
 
 test:
