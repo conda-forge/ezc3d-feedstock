@@ -50,6 +50,34 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_aarch64_backendoctave</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2567&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ezc3d-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_backendoctave" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_backendpython3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2567&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ezc3d-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_backendpython3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_backendoctave</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2567&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ezc3d-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_backendoctave" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_backendpython3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2567&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ezc3d-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_backendpython3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_64_backendoctave</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2567&branchName=main">

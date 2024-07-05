@@ -1,9 +1,13 @@
+BUILD:
+- aarch64-conda_cos7-linux-gnu
 backend:
-- python3
+- octave
 c_stdlib:
 - sysroot
 c_stdlib_version:
 - '2.17'
+cdt_arch:
+- aarch64
 cdt_name:
 - cos7
 channel_sources:
@@ -29,7 +33,7 @@ python:
 - 3.11.* *_cpython
 - 3.12.* *_cpython
 target_platform:
-- linux-64
+- linux-aarch64
 zip_keys:
 - - c_stdlib_version
   - cdt_name
