@@ -1,6 +1,6 @@
 {% set name = "ezc3d" %}
 {% set version = "1.5.10" %}
-{% set build_num = 2 %}
+{% set build_num = 3 %}
 
 package:
   name: {{ name|lower }}
