@@ -8,76 +8,28 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_backendoctavenumpy2.0python3.10.____cpython:
-        CONFIG: linux_64_backendoctavenumpy2.0python3.10.____cpython
+      linux_64_backendoctave:
+        CONFIG: linux_64_backendoctave
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_backendoctavenumpy2.0python3.11.____cpython:
-        CONFIG: linux_64_backendoctavenumpy2.0python3.11.____cpython
+      linux_64_backendpython3:
+        CONFIG: linux_64_backendpython3
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_backendoctavenumpy2.0python3.12.____cpython:
-        CONFIG: linux_64_backendoctavenumpy2.0python3.12.____cpython
+      linux_aarch64_backendoctave:
+        CONFIG: linux_aarch64_backendoctave
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_backendpython3numpy2.0python3.10.____cpython:
-        CONFIG: linux_64_backendpython3numpy2.0python3.10.____cpython
+      linux_aarch64_backendpython3:
+        CONFIG: linux_aarch64_backendpython3
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_backendpython3numpy2.0python3.11.____cpython:
-        CONFIG: linux_64_backendpython3numpy2.0python3.11.____cpython
+      linux_ppc64le_backendoctave:
+        CONFIG: linux_ppc64le_backendoctave
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_backendpython3numpy2.0python3.12.____cpython:
-        CONFIG: linux_64_backendpython3numpy2.0python3.12.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_backendoctavenumpy2.0python3.10.____cpython:
-        CONFIG: linux_aarch64_backendoctavenumpy2.0python3.10.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_backendoctavenumpy2.0python3.11.____cpython:
-        CONFIG: linux_aarch64_backendoctavenumpy2.0python3.11.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_backendoctavenumpy2.0python3.12.____cpython:
-        CONFIG: linux_aarch64_backendoctavenumpy2.0python3.12.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_backendpython3numpy2.0python3.10.____cpython:
-        CONFIG: linux_aarch64_backendpython3numpy2.0python3.10.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_backendpython3numpy2.0python3.11.____cpython:
-        CONFIG: linux_aarch64_backendpython3numpy2.0python3.11.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_backendpython3numpy2.0python3.12.____cpython:
-        CONFIG: linux_aarch64_backendpython3numpy2.0python3.12.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_backendoctavenumpy2.0python3.10.____cpython:
-        CONFIG: linux_ppc64le_backendoctavenumpy2.0python3.10.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_backendoctavenumpy2.0python3.11.____cpython:
-        CONFIG: linux_ppc64le_backendoctavenumpy2.0python3.11.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_backendoctavenumpy2.0python3.12.____cpython:
-        CONFIG: linux_ppc64le_backendoctavenumpy2.0python3.12.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_backendpython3numpy2.0python3.10.____cpython:
-        CONFIG: linux_ppc64le_backendpython3numpy2.0python3.10.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_backendpython3numpy2.0python3.11.____cpython:
-        CONFIG: linux_ppc64le_backendpython3numpy2.0python3.11.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_backendpython3numpy2.0python3.12.____cpython:
-        CONFIG: linux_ppc64le_backendpython3numpy2.0python3.12.____cpython
+      linux_ppc64le_backendpython3:
+        CONFIG: linux_ppc64le_backendpython3
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
   timeoutInMinutes: 360
