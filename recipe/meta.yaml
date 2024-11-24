@@ -1,5 +1,5 @@
 {% set name = "ezc3d" %}
-{% set version = "1.5.12" %}
+{% set version = "1.5.13" %}
 {% set build_num = 3 %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/pyomeca/{{ name }}/archive/Release_{{ version }}.tar.gz
-  sha256: 7695215ae1a4b6127e05d2ac065c95e4dcefd82a7013771d0065ed28bd01a589
+  sha256: 70b86bc37216075dc400fcfd94c0ee107268bf710b1df8f5a4042eb390e7b2ff
 
 build:
   number: {{ build_num }}
