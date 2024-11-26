@@ -1,0 +1,84 @@
+schema_version: 1
+
+context:
+  name: ezc3d
+  version: 1.5.17
+  build_num: 0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/pyomeca/${{ name }}/archive/Release_${{ version }}.tar.gz
+  sha256: d3192a033a230c4334495dd8cf0588f6728bcd711ebad3c495888fe857e9250b
+
+build:
+  number: ${{ build_num }}
+  string: py${{ py }}_${{ backend }}_h${{ PKG_HASH }}_${{ build_num }}
+  skip: match(python, '<3.10') or (arm64 and backend == 'octave')
+  dynamic_linking:
+    rpaths:
+      - lib/
+      - lib/${{ name }}/
+  variant:
+      use_keys:
+        - backend
+      down_prioritize_variant: ${{ 1 if backend == 'octave' else 0 }}
+        
+requirements:
+  build:
+    - cmake
+    - ninja
+    - pkgconfig
+    - swig
+    - if: build_platform != target_platform and backend == 'python3'
+      then: 
+        - python
+        - cross-python_${{ target_platform }}
+        - numpy
+    - if: backend == 'octave'
+      then: octave
+    - ${{ compiler('cxx') }}
+    - ${{ stdlib('c') }}
+  host:
+    - if: backend == 'python3'
+      then: 
+        - python
+        - numpy
+    - if: backend == 'octave'
+      then: octave
+  run:
+    - if: backend == 'python3'
+      then: python
+    - if: backend == 'octave'
+      then: octave
+  run_exports:
+    - ${{ pin_subpackage('ezc3d', upper_bound='x.x') }}
+    - ${{ name }} * *${{ backend }}*
+
+tests:
+  - if: backend == 'python3'
+    then: 
+      - python:
+          imports:
+            - ezc3d
+
+about:
+  license: MIT
+  license_file: LICENSE
+  summary: Easy to use C3D reader/writer in C++, Python
+  description: |
+    EZC3D is an easy to use reader, modifier and writer for C3D format files. It
+    is written en C++ with proper binders for Python and MATLAB scripting
+    langages.
+
+  homepage: https://github.com/pyomeca/ezc3d
+  repository: https://github.com/pyomeca/ezc3d
+  documentation: https://pyomeca.github.io/Documentation/ezc3d/
+
+extra:
+  recipe-maintainers:
+    - melund
+    - pariterre
+
