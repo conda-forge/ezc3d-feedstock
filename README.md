@@ -17,7 +17,6 @@ EZC3D is an easy to use reader, modifier and writer for C3D format files. It
 is written en C++ with proper binders for Python and MATLAB scripting
 langages.
 
-
 Current build status
 ====================
 
