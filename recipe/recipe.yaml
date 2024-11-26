@@ -1,9 +1,6 @@
-schema_version: 1
-
 context:
   name: ezc3d
   version: 1.5.17
-  build_num: 0
 
 package:
   name: ${{ name|lower }}
@@ -14,8 +11,8 @@ source:
   sha256: d3192a033a230c4334495dd8cf0588f6728bcd711ebad3c495888fe857e9250b
 
 build:
-  number: ${{ build_num }}
-  string: py${{ py }}_${{ backend }}_h${{ PKG_HASH }}_${{ build_num }}
+  number: 0
+  string: py${{ py }}_${{ backend }}_h${{ PKG_HASH }}_${{ build_number }}
   skip: match(python, '<3.10') or (arm64 and backend == 'octave')
   dynamic_linking:
     rpaths:
@@ -81,4 +78,3 @@ extra:
   recipe-maintainers:
     - melund
     - pariterre
-
