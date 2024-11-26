@@ -2,7 +2,7 @@ context:
   version: 1.5.17
 
 package:
-  name: ${{ name|lower }}
+  name: ezc3d
   version: ${{ version }}
 
 source:
