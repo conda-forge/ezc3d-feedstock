@@ -1,5 +1,4 @@
 context:
-  name: ezc3d
   version: 1.5.17
 
 package:
@@ -7,7 +6,7 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://github.com/pyomeca/${{ name }}/archive/Release_${{ version }}.tar.gz
+  url: https://github.com/pyomeca/ezc3d/archive/Release_${{ version }}.tar.gz
   sha256: d3192a033a230c4334495dd8cf0588f6728bcd711ebad3c495888fe857e9250b
 
 build:
@@ -17,10 +16,8 @@ build:
   dynamic_linking:
     rpaths:
       - lib/
-      - lib/${{ name }}/
+      - lib/ezc3d/
   variant:
-      use_keys:
-        - backend
       down_prioritize_variant: ${{ 1 if backend == 'octave' else 0 }}
         
 requirements:
@@ -52,7 +49,7 @@ requirements:
       then: octave
   run_exports:
     - ${{ pin_subpackage('ezc3d', upper_bound='x.x') }}
-    - ${{ name }} * *${{ backend }}*
+    - ezc3d * *${{ backend }}*
 
 tests:
   - if: backend == 'python3'
