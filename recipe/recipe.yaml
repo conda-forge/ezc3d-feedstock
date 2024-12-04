@@ -11,14 +11,12 @@ source:
 
 build:
   number: 0
-  string: py${{ py }}_${{ backend }}_h${{ PKG_HASH }}_${{ build_number }}
-  skip: match(python, '<3.10') or (arm64 and backend == 'octave')
+  string: py${{ py }}_python3_h${{ PKG_HASH }}_${{ build_number }}
+  skip: match(python, '<3.10')
   dynamic_linking:
     rpaths:
       - lib/
       - lib/ezc3d/
-  variant:
-      down_prioritize_variant: ${{ 1 if backend == 'octave' else 0 }}
         
 requirements:
   build:
@@ -26,37 +24,21 @@ requirements:
     - ninja
     - pkgconfig
     - swig
-    - if: build_platform != target_platform and backend == 'python3'
-      then: 
-        - python
-        - cross-python_${{ target_platform }}
-        - numpy
-    - if: backend == 'octave'
-      then: octave
     - ${{ compiler('cxx') }}
     - ${{ stdlib('c') }}
   host:
-    - if: backend == 'python3'
-      then: 
-        - python
-        - numpy
-    - if: backend == 'octave'
-      then: octave
+    - python
+    - numpy
   run:
-    - if: backend == 'python3'
-      then: python
-    - if: backend == 'octave'
-      then: octave
+    - python
   run_exports:
     - ${{ pin_subpackage('ezc3d', upper_bound='x.x') }}
-    - ezc3d * *${{ backend }}*
+    - ezc3d * *python3*
 
 tests:
-  - if: backend == 'python3'
-    then: 
-      - python:
-          imports:
-            - ezc3d
+  - python:
+      imports:
+        - ezc3d
 
 about:
   license: MIT
