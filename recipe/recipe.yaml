@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pyomeca/ezc3d/archive/Release_${{ version }}.tar.gz
-  sha256: d3192a033a230c4334495dd8cf0588f6728bcd711ebad3c495888fe857e9250b
+  sha256: 793aef749fa1e97eeae85777d46f6cab58f595cac1b8ce6b697ec1f91eb004f2
 
 build:
   number: 0
