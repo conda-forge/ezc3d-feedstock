@@ -23,6 +23,11 @@ requirements:
     - ninja
     - pkgconfig
     - swig
+    - if: build_platform != target_platform
+      then: 
+        - python
+        - cross-python_{{ target_platform }}
+        - numpy
     - ${{ compiler('cxx') }}
     - ${{ stdlib('c') }}
   host:
