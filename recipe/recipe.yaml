@@ -10,13 +10,13 @@ source:
   sha256: 793aef749fa1e97eeae85777d46f6cab58f595cac1b8ce6b697ec1f91eb004f2
 
 build:
-  number: 0
+  number: 1
   skip: match(python, '<3.10')
   dynamic_linking:
     rpaths:
       - lib/
       - lib/ezc3d/
-        
+
 requirements:
   build:
     - cmake
@@ -24,7 +24,7 @@ requirements:
     - pkgconfig
     - swig
     - if: build_platform != target_platform
-      then: 
+      then:
         - python
         - cross-python_${{ target_platform }}
         - numpy
