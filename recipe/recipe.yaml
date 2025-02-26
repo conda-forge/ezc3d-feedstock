@@ -1,5 +1,5 @@
 context:
-  version: 1.5.17
+  version: "1.5.18"
 
 package:
   name: ezc3d
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/pyomeca/ezc3d/archive/Release_${{ version }}.tar.gz
-  sha256: 793aef749fa1e97eeae85777d46f6cab58f595cac1b8ce6b697ec1f91eb004f2
+  sha256: 189895cecdd5c8ad470295933c946563045cf56811344379dd3f74b2454315f1
 
 build:
-  number: 1
+  number: 0
   skip: match(python, '<3.10')
   dynamic_linking:
     rpaths:
