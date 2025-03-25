@@ -10,7 +10,7 @@ source:
   sha256: 189895cecdd5c8ad470295933c946563045cf56811344379dd3f74b2454315f1
 
 build:
-  number: 0
+  number: 1
   skip: match(python, '<3.10')
   dynamic_linking:
     rpaths:
@@ -37,6 +37,17 @@ requirements:
     - python
 
 tests:
+  - script:
+      - if: win
+        then: cmake info/recipe/tests %CMAKE_ARGS% -B info/recipe/tests/build -GNinja -DCMAKE_BUILD_TYPE=Release
+        else: cmake info/recipe/tests ${CMAKE_ARGS} -B info/recipe/tests/build -GNinja -DCMAKE_BUILD_TYPE=Release
+      - cmake --build info/recipe/tests/build
+    requirements:
+      build:
+        - ${{ compiler('cxx') }}
+        - ${{ stdlib('c') }}
+        - cmake
+        - ninja
   - python:
       imports:
         - ezc3d
