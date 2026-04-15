@@ -1,5 +1,5 @@
 context:
-  version: "1.6.3"
+  version: "1.7.0"
 
 package:
   name: ezc3d
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pyomeca/ezc3d/archive/Release_${{ version }}.tar.gz
-  sha256: 49f297b1046214771b5a4b2037621642c7bb8a454ca3976a7f5cacb222670af3
+  sha256: a87698656f44a352471b137315bf63466c2d30c4a3d35ea412422419d848924c
 
 build:
   number: 0
