@@ -22,7 +22,7 @@ requirements:
     - cmake
     - ninja
     - pkgconfig
-    - swig
+    - swig <4.4.0
     - if: build_platform != target_platform
       then:
         - python
