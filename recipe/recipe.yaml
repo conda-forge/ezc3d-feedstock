@@ -10,7 +10,7 @@ source:
   sha256: 7c57a7a86a0883c1c59bc20f467f4bc89a94d1e7bd356d35b3e966c82dd6d61a
 
 build:
-  number: 1
+  number: 2
   skip: match(python, '<3.10')
   dynamic_linking:
     rpaths:
